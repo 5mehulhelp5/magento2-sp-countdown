@@ -52,7 +52,6 @@ define(['jquery'], function ($) {
             },
 
             _getSelectedChildProductId: function () {
-
                 const renderer = this._getSwatchRenderer();
                 if (!renderer) {
                     return null;
@@ -88,8 +87,8 @@ define(['jquery'], function ($) {
             _getSelectedOptionIds: function () {
                 const selected_options = {};
                 jQuery('div.swatch-attribute').each(function (k, v) {
-                    var attribute_id = jQuery(v).attr('data-attribute-id');
-                    var option_selected = jQuery(v).attr('data-option-selected');
+                    const attribute_id = jQuery(v).attr('data-attribute-id');
+                    const option_selected = jQuery(v).attr('data-option-selected');
                     if (!attribute_id || !option_selected) { return;}
                     selected_options[attribute_id] = option_selected;
                 });
